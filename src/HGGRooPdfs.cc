@@ -30,6 +30,8 @@
 #include "../interface/HGGRooPdfs.h"
 #include "RooRealVar.h"
 
+#include "vdt/vdtMath.h"
+
 ClassImp(RooPower)
 
 
