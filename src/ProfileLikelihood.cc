@@ -88,6 +88,7 @@ ProfileLikelihood::MinimizerSentry::MinimizerSentry(const std::string &minimizer
     minimizerTollBackup(ROOT::Math::MinimizerOptions::DefaultTolerance())
 {
   ROOT::Math::MinimizerOptions::SetDefaultTolerance(tolerance);
+  ROOT::Math::MinimizerOptions::PrintDefault("");
   if (minimizerAlgo.find(",") != std::string::npos) {
       size_t idx = minimizerAlgo.find(",");
       std::string type = minimizerAlgo.substr(0,idx), algo = minimizerAlgo.substr(idx+1);

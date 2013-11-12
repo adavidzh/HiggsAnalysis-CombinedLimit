@@ -72,6 +72,7 @@ bool CascadeMinimizer::improveOnce(int verbose)
 {
     std::string myType(ROOT::Math::MinimizerOptions::DefaultMinimizerType());
     std::string myAlgo(ROOT::Math::MinimizerOptions::DefaultMinimizerAlgo());
+    minimizer_->setEps(ROOT::Math::MinimizerOptions::DefaultTolerance());
     bool outcome = false;
     if (oldFallback_){
         outcome = nllutils::robustMinimize(nll_, *minimizer_, verbose, setZeroPoint_);
